@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body{
+    display: relative;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+nav{
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background-color: orange;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 99;
+}
+
+.logo{
+    font-size: 2em;
+    color: white;
+    user-select: none;
+}
+
+nav a{
+    position: relative;
+    font-size: 1.3em;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 40px;
+}
+
+nav a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+nav a:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+footer{
+    width: 100%;
+    bottom: 0;
+    background-color: orange;
+    padding: 100px 0 30px;
+    line-height: 20px;
+}
+
+.footer-container{
+    width: 100%;
+    padding-left: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.footer-container .col{
+    flex-basis: 25%;
+    padding: 10px;   
+}
+
+.footer-container .col h3{
+    width: fit-content;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+#email{
+    width: fit-content;
+    margin: 20px 0;
+}
+
+footer ul li{
+    list-style: none;
+    margin-bottom: 12px;
+}
+
+footer a{
+    text-decoration: none;
+    color: black;
+}
